@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onclick(view: View) {
+        // save you key value to cache, default is using shared preference
         KVApp.kv.testKVCacheString().put("hello KVCache")
         KVApp.kv.testKVCacheInt().put(2020)
         KVApp.kv.testKVCacheFloat().put(3.14f)
