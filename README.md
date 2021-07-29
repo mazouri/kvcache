@@ -3,10 +3,12 @@
 
 ## About kvcache
 This library is a tool to help you set and get key-vlue data with better way in Andrtoid development. From now, change your sharedpreference code and other key-value code to `kvcache`, and coding the beautiful code.
+该库旨在为Android开发提供设置key-value数据的工具，如果你的项目中还在使用sharedpreference，那么你可以用`kvcache`这个库替换掉它，让代码看起来更优雅！
 
-## How to use
-> Step 1/2/3 is to init kvcache
-> you only need to modidy interface KV when you need add a key-value data.(Step 4)
+## How to use 使用指南
+> Step 1/2/3 is to init kvcache 按照步骤1、2、3初始化kvcache
+> you only need to modify interface KV when you need add a key-value data.(Step 4) 
+> 当你需要添加KV数据的时候，你只需要修改KV这个接口文件就行了。
 > and 
 
 Step 1. Add it in your root build.gradle at the end of repositories:
@@ -42,7 +44,7 @@ Step 3. Init the KVCache in your Application class
         kv = kvCache.create(KV::class.java)
     }
 
-Step 4. Create a interface KV to config your key-value infomation
+Step 4. Create a interface KV to config your key-value infomation（创建KV接口，然后就可以配置你的key-value的数据了）
 
 	interface KV {
 
@@ -67,7 +69,7 @@ Step 4. Create a interface KV to config your key-value infomation
 	    fun testKVCacheLong(): Call<Long>
 	}
 
-Step 5.now you can use it everywhere in your app easyly
+Step 5.now you can use it everywhere in your app easyly（轻松存取任意基本类型数据）
 	
 	// save you key value to cache, default is using shared preference
 	KVApp.kv.testKVCacheString().put("hello KVCache")
